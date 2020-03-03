@@ -1,0 +1,25 @@
+/*
+ Theme Name:   Underscores Enfant
+ Theme URI:    http://example.com/twenty-fifteen-child/
+ Description:  Underscores Enfant Theme
+ Author:       Tommy Le Ha
+ Author URI:   http://example.com
+ Template:     Underscores
+ Version:      1.0.0
+ License:      GNU General Public License v2 or later
+ License URI:  http://www.gnu.org/licenses/gpl-2.0.html
+ Tags:         light, dark, two-columns, right-sidebar, responsive-layout, accessibility-ready
+ Text Domain:  Underscores Enfant
+*/
+
+body{
+    font-family: "Montserrat", sans-serif;
+}
+
+.post-thumbnail{
+    text-align: center;
+}
+.wp-block-cgb-block-my-block{
+    background-color: rgb(40, 105, 161);
+    color:white;
+}
