@@ -31,7 +31,6 @@ get_header();
 		endwhile; // End of the loop.
 	
         echo '<h1>Nos dernières conférences</h1>';
-
  /* The 2nd Query (without global var) */
 $args2 = array(
 
@@ -49,9 +48,16 @@ echo "<h1>" .category_description($catID[0]). "</h1>";
 // The 2nd Loop
 while ( $query2->have_posts() ) {
     $query2->the_post();
-    echo '<li>' . get_the_title( $query2->post->ID ) . " - " .get_the_date().'</li>';
-    echo "<p>" . get_the_excerpt(). "</p>";
-    echo get_the_post_thumbnail(null, "thumbnail");
+    echo '<div class= "conteneurGlobal">';
+    echo '<div class= "conteneurImage">'; 
+             echo the_post_thumbnail(null, "thumbnail");
+             echo '</div>';
+         echo '<div class= "conteneurTexte">';
+         echo '<li>' . get_the_title( $query2->post->ID ) . " - " .get_the_date().'</li>';
+         echo "<p>" . get_the_excerpt(). "</p>";
+         echo '</div>';
+             
+     echo '</div>';
 }
 
 /* Restore original Post Data 
@@ -63,10 +69,11 @@ while ( $query2->have_posts() ) {
 wp_reset_postdata();
  
 echo '<h1>Voici les dernières nouvelles</h1>';
+echo '<div class= "conteneurGlobalImage">';
  // The Query
 $args = array(
     "category_name" => "nouvelle",
-    'posts_per_page' => 3,
+    'posts_per_page' => 5,
     "orderby" => "date",
     "order" => "DESC"
 );
@@ -75,11 +82,10 @@ $query1 = new WP_Query( $args );
 // The Loop
 while ( $query1->have_posts() ) {
 $query1->the_post();
+echo the_post_thumbnail(null, "thumbnail");
 echo '<h4>' . get_the_title() . '</h4>';
-echo get_the_post_thumbnail(null, "thumbnail");
 }
-
- 
+echo '</div>';
 // Restore original Post Data
 wp_reset_postdata();
  
