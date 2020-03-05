@@ -1,3 +1,6 @@
+/*--------------------------------------------------------------
+# Typographie
+--------------------------------------------------------------*/
 /*
  Theme Name:   Underscores Enfant
  Theme URI:    http://example.com/twenty-fifteen-child/
@@ -11,16 +14,20 @@
  Tags:         light, dark, two-columns, right-sidebar, responsive-layout, accessibility-ready
  Text Domain:  Underscores Enfant
 */
-
-body{
-    font-family: "Montserrat", sans-serif;
-    background-color: aliceblue;
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: aliceblue;
 }
 
-.post-thumbnail{
-    text-align: center;
+/*--------------------------------------------------------------
+# Typographie
+--------------------------------------------------------------*/
+.post-thumbnail {
+  text-align: center;
 }
-.wp-block-cgb-block-my-block{
-    background-color: rgb(40, 105, 161);
-    color:white;
+
+.wp-block-cgb-block-my-block {
+  background-color: #2869a1;
+  color: white;
 }
+/*# sourceMappingURL=style.css.map */
