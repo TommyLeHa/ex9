@@ -116,4 +116,12 @@ body {
 /*--------------------------------------------------------------
 # Grille événement
 --------------------------------------------------------------*/
+.site-main {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  -ms-grid-rows: (1fr)[31];
+      grid-template-rows: repeat(31, 1fr);
+}
 /*# sourceMappingURL=style.css.map */
